@@ -16,6 +16,10 @@ A powerful platform for image processing & recognition.
 
    [x] Upload the image (JPG, PNG, SVG, WEBp)
 
+   [x] Rename image file
+
+   [x] Save image file
+
 2. Image Preprocessing
 
    [x] Display the uploaded image

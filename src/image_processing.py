@@ -3,9 +3,9 @@
 
 import cv2
 import numpy as np
-from skimage.feature import hog
-from sklearn.cluster import KMeans
-from tensorflow.keras.models import load_model
+# from skimage.feature import hog
+# from sklearn.cluster import KMeans
+# from tensorflow.keras.models import load_model
 
 def graycale(img): pass
 def increase_contrast(img): pass
@@ -15,6 +15,10 @@ def crop(img, new_length, new_breadth): pass
 def add_frame(img): pass
 def rotate(img, direction):pass
 def smoothen(img): pass
+def compress(img, new_resolution): pass
+def convert_to_jpg(img): pass
+def remove_background(img): pass
+
 
 # Load pre-trained model for classification (if applicable)
 # model = load_model("path_to_model.h5")
@@ -42,9 +46,9 @@ def segment(image, method):
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     if method == "K-Means Clustering":
         pixels = image.reshape(-1, 3)
-        kmeans = KMeans(n_clusters=3).fit(pixels)
-        segmented = kmeans.cluster_centers_[kmeans.labels_].reshape(image.shape)
-        return segmented.astype(np.uint8)
+        # kmeans = KMeans(n_clusters=3).fit(pixels)
+        # segmented = kmeans.cluster_centers_[kmeans.labels_].reshape(image.shape)
+        # return segmented.astype(np.uint8)
     elif method == "Watershed":
         _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
         dist_transform = cv2.distanceTransform(binary, cv2.DIST_L2, 5)
