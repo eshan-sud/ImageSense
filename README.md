@@ -20,6 +20,10 @@ A powerful platform for image processing & recognition.
 
    [x] Save image file
 
+   [] Add undo, redo options
+
+   [] Add the ability to share the image to other mediums
+
 2. Image Preprocessing
 
    [x] Display the uploaded image
