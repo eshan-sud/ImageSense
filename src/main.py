@@ -1,11 +1,6 @@
 
 # filename - src/script.py
 
-# venv\scripts\activate
-# pip install scikit-image scikit-learn matplotlib tensorflow
-# pip freeze > src/requirements.txt
-# streamlit run src/script.py
-
 import streamlit as st
 import cv2
 import numpy as np
@@ -14,29 +9,34 @@ import time
 from PIL import Image
 import io
 
-# Import custom modules
+# Imports the custom modules
 import image_processing
 import face_recognition
 import feature_extraction
 
+# Displays a temporary SUCCESS message
 def show_temp_success(success):
     success_msg = st.success(success)
     time.sleep(3)
     success_msg.empty()
 
+# Displays a temporary ERROR message
 def show_temp_error(error):
     error_msg = st.error(error)
     time.sleep(3)
     error_msg.empty()
 
+# Displays a temporary WARNING message
 def show_temp_warning(warning):
     warning_msg = st.warning(warning)
     time.sleep(3)
     warning_msg.empty()
 
+# Image is checked
 def image_exists(img):
     return img is not None
 
+# Image is saved on device
 def save_image(img, format):
     pil_img = Image.fromarray(img)
     img_byte_arr = io.BytesIO()
@@ -44,6 +44,7 @@ def save_image(img, format):
     img_byte_arr.seek(0)
     return img_byte_arr
 
+# User Interface is created
 def user_interface():
     # Page Configiration
     st.set_page_config(
@@ -76,7 +77,7 @@ def user_interface():
         new_name = st.text_input("Rename the uploaded image", value=image_name).lower()
         if new_name != image_name:
             show_temp_success(f"Image renamed to: {new_name}")
-        st.image(image, caption=f"Uploaded Image : {new_name}", use_container_width=True)
+        st.image(image, caption=f"Uploaded Image : {new_name}")
         if flag:
             show_temp_success("Image uploaded successfully!")
             flag = False
@@ -132,6 +133,7 @@ def user_interface():
                 classified_label = image_processing.classify(image, classifier_type)
                 show_temp_success(f"Classified as: {classified_label}")
 
+        # Save Image
         st.header("Save image")
         format = st.radio("Select Format:", [
             "JPEG",
@@ -152,6 +154,7 @@ def user_interface():
         st.sidebar.warning("Upload an image to get started.")
     st.sidebar.text("Developed with ❤️ by Eshan Sud")
 
+# Iamge is first uploaded & then processing is performed
 def upload_image():
     uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "png", "jpeg", "svg", "webp"])
     if uploaded_file is not None:
@@ -160,5 +163,6 @@ def upload_image():
         return np.array(image), image_name
     return None, None
 
+# Program starts from here
 if __name__ == "__main__":
     user_interface()

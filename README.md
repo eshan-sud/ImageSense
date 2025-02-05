@@ -12,81 +12,59 @@ A powerful platform for image processing & recognition.
 
 1. User Interface
 
-   [x] Basic UI
-
-   [x] Upload the image (JPG, PNG, SVG, WEBp)
-
-   [x] Rename image file
-
-   [x] Save image file
-
-   [] Add undo, redo options
-
-   [] Add the ability to share the image to other mediums
+- [x] Basic UI
+- [x] Upload the image (JPG, PNG, SVG, WEBp)
+- [x] Rename image file
+- [x] Save image file
+- [] Add undo, redo options
+- [] Add the ability to share the image to other mediums
 
 2. Image Preprocessing
 
-   [x] Display the uploaded image
-
-   [] Convert to grayscale & histogram equalization
-
-   [] Resize, crop, and rotate images
-
-   [] Apply smoothing & sharpening filters (Gaussian, Median, Bilateral)
+- [x] Display the uploaded image
+- [] Convert to grayscale & histogram equalization
+- [] Image resize, crop, rotate, compression, contrast streching, colour processing, inpainting, fusion - Stable Diffusion
+- [] Apply smoothing & sharpening filters (Gaussian, Median, Bilateral)
+- [] Deblurring & Denoising
 
 3. Edge Detection & Segmentation
 
-   [] Edge detection using Sobel, Prewitt, Laplacian, Canny
-
-   [] Image thresholding (Global, Adaptive, Otsu's method)
-
-   [] Segmentation using K-Means, Watershed, GrabCut
-
-   [] Morphological operations (Erosion, Dilation, Opening, Closing)
+- [] Edge detection using Sobel, Prewitt, Laplacian, Canny
+- [] Image thresholding (Global, Adaptive, Otsu's method)
+- [] Segmentation using K-Means, Watershed, GrabCut
+- [] Morphological operations (Erosion, Dilation, Opening, Closing)
 
 4. Feature Extraction
 
-   [] Extract & visualize key features using SIFT, SURF, ORB, HOG
-
-   [] PCA-based dimensionality reduction visualization
-
-   [] Compute texture features (GLCM, LBP)
-
-   [] Histogram-based feature analysis
+- [] Extract & visualize key features using SIFT, SURF, ORB, HOG
+- [] PCA-based dimensionality reduction visualization
+- [] Compute texture features (GLCM, LBP)
+- [] Histogram-based feature analysis
 
 5. Pattern Recognition & Classification
 
-   [] Train & test classifiers on extracted features
-
-   [] Support for KNN, SVM, Decision Trees, CNN (Pretrained Models)
-
-   [] Upload custom datasets for classification
-
-   [] Evaluate models with accuracy, precision, recall
+- [] Train & test classifiers on extracted features
+- [] Support for KNN, SVM, Decision Trees, CNN (Pretrained Models)
+- [] Upload custom datasets for classification
+- [] Evaluate models with accuracy, precision, recall
 
 6. Face Detection & Recognition
 
-   [] Detect faces using Haar Cascades, DNN (ResNet, MobileNet)
-
-   [] Recognize faces using LBPH, Eigenfaces, Fisherfaces
-
-   [] Live face recognition via webcam feed
+- [] Detect faces using Haar Cascades, DNN (ResNet, MobileNet)
+- [] Recognize faces using LBPH, Eigenfaces, Fisherfaces
+- [] Live face recognition via webcam feed
 
 7. Interactive Visualizations
 
-   [] Show histograms, feature maps, contour plots
-
-   [] Compare different image processing techniques side-by-side
-
-   [] Display real-time classifier performance
+- [] Show histograms, feature maps, contour plots
+- [] Compare different image processing techniques side-by-side
+- [] Display real-time classifier performance
 
 8. API Integration & Deployment
 
-   [] Allow image uploads via API for batch processing
-
-   [] Deploy seamlessly on Streamlit Cloud
-
-   [] Share app via public URL
+- [] Allow image uploads via API for batch processing
+- [] Deploy seamlessly on Streamlit Cloud
+- [] Share app via public URL
 
 ## Setup (for devs)
 
